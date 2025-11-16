@@ -1,0 +1,14 @@
+.movie-list-fixed {
+    display: flex;
+    flex-wrap: nowrap; 
+    gap: 10px; 
+    justify-content: flex-start; 
+    align-items: center; 
+    overflow: visible; 
+  }
+
+.movie {
+  flex: 1;
+  max-width: 200px; 
+  text-align: center;
+}

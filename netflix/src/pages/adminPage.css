@@ -1,0 +1,29 @@
+.admin-area {
+    text-align: center;
+    margin-top: 200px;
+  }
+  
+  .admin-area h1 {
+    font-size: 5rem;
+    color: #e50914;
+  }
+  .admin-area h2 {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: var(--primary-text);
+  }
+  
+  .dropdown-wrapper {
+    margin-top: 30px;
+  }
+  
+  .dropdown-wrapper select {
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-color: red;
+    background-color: #1b080892;
+    color: var(--primary-text);
+  }
+  

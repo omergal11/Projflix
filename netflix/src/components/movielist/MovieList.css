@@ -1,0 +1,104 @@
+.movie-list-container {
+    margin: 0px;
+    position: relative;
+    color: var(--primary-text);
+    overflow: visible;
+    overflow: visible;;
+    background: none !important;
+    height: auto;
+    margin-top: 50px; 
+    margin-left:40px ;
+    flex-wrap: nowrap;
+    background-color: white;
+    
+    
+  }
+  .movie-list {
+    display: flex;
+    overflow: visible;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 4px; 
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; 
+    padding-bottom: 10px;
+    position: relative;
+    scrollbar-width: none;
+    background: none !important; /* Remove any background */
+  
+  }
+  
+  .movie-list-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    background-color: transparent;
+    color: var(--primary-text);
+  
+    
+  }
+  .movie-list-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+    background: none !important;
+  
+  }
+  .scroll-button.left {
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .scroll-button.right {
+    right: 0;
+    transform: translateY(-50%);
+  }
+  
+  .scroll-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  .scroll-button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    z-index: 10;
+    height: 80%;
+    
+  }
+  
+  .scroll-button:hover {
+    background-color: rgba(169, 166, 166, 0.2);
+  }
+  
+  
+  .movie-list::-webkit-scrollbar {
+    height: 8px; 
+    display: none ;
+  }
+  
+  .movie-list::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+  }
+  
+  .movie-list::-webkit-scrollbar-thumb:hover {
+    background: #7c7b7b;
+  }
+  .movie-list-wrapper .scroll-button {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .movie-list-container:hover .scroll-button {
+    opacity: 1;
+  }
+  

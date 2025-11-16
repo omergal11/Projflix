@@ -1,0 +1,41 @@
+/* FileInput.css */
+.file-input-container {
+    margin-bottom: 1rem;
+  }
+  
+  .file-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-text);
+    font-weight: bold;
+  }
+  
+  .file-input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .file-input {
+    width: 100%;
+    padding: 8px 16px;
+    background-color: var(--secondary-bg);
+    color: var(--primary-text);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .file-input::-webkit-file-upload-button {
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--primary-text);
+    padding: 8px 16px;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+  
+  .file-input:hover,
+  .file-input::-webkit-file-upload-button:hover {
+    background: var(--hover-bg);
+  }

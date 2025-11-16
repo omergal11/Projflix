@@ -1,0 +1,33 @@
+.footer {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    padding: 10px;
+    text-align: center;
+    margin-top: 50px;
+  }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      color: var(--primary-text);
+  
+    }
+    
+    .footer-links a {
+      color: #757575;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .footer-service-code {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #757575;
+    }
+    

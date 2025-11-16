@@ -1,0 +1,104 @@
+/* Auth form container */
+.auth-form {
+    background-color: rgba(0, 0, 0, 0.85); 
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    max-width: 400px; 
+    margin: 50px auto; 
+  }
+  
+  /* Form title */
+  .auth-form h2 {
+    font-size: 20px; 
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Input field styles */
+  .form-input {
+    margin-bottom: 20px; 
+   
+  
+  }
+  
+  .form-input label {
+    display: block;
+    margin-bottom: 5px; 
+    font-size: 14px; 
+    color: #ddd;
+    margin-right:40px ;
+  }
+  
+  .form-input input {
+    width: 120% !important; 
+    font-size: 14px; 
+    border: 1px solid #555; 
+    border-radius: 5px; 
+    background-color: #222; 
+    color: #fff;
+    
+  }
+  
+  .form-input input:focus {
+    outline: none;
+    border-color: #e50914; 
+  }
+  
+  /* File input */
+  .form-input input[type="file"] {
+    border: none; 
+    background-color: transparent; 
+    color: #fff; 
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  /* Button styles */
+  .auth-form button {
+    width: 80%;
+    padding: 12px; 
+    font-size: 16px;
+    color: white;
+    background-color: #e50914; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 40px;
+  }
+  
+  .auth-form button:hover {
+    background-color: #b00710; 
+  }
+  
+  .auth-link {
+    display: flex; 
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fff;
+  }
+  
+  .auth-link a {
+    color: #e50914; 
+    text-decoration: none; 
+    font-weight: bold; 
+    margin-left: 5px; 
+  }
+  
+  .auth-link a:hover {
+    color: #b00710; 
+  }
+  
+  .success-message {
+    color: rgb(0, 252, 8);
+      font-size: 12px; 
+      margin-bottom: 10px; 
+      text-align: center;
+  }
+  .button {
+    margin-left:30px !important ;
+  }

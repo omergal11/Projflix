@@ -1,0 +1,26 @@
+# Use the GCC base image
+FROM gcc:latest
+
+# Install CMake and dependencies
+RUN apt-get update && apt-get install -y cmake git
+
+# Set the working directory
+WORKDIR /usr/src
+
+# Copy project files
+COPY ./recommend/CMakeLists.txt /usr/src
+COPY ./recommend/src /usr/src/src
+COPY ./recommend/data /usr/src/data
+
+# Create a build directory
+RUN mkdir build
+WORKDIR /usr/src/build
+
+# Run CMake and build both the main program and tests
+RUN cmake .. && make
+
+# Verify that executables are created
+RUN ls /usr/src/build/myapp  || echo "Executables not found!"
+
+# Default command (can be overridden in docker-compose.yml)
+ENTRYPOINT ["./myapp"]

@@ -1,0 +1,39 @@
+:root {
+    /* Dark theme (default) */
+    --primary-bg: #141414;
+    --primary-text: #ffffff;
+    --secondary-bg: #333;
+    --border-color: #444;
+    --nav-bg: rgba(20, 20, 20, 0.9);
+    --hover-bg: rgba(255, 255, 255, 0.1);
+    --card-bg: #262626;
+    --placeholder-color: rgba(255, 255, 255, 0.6);
+    --placeholder-text: rgba(255, 255, 255, 0.6);
+
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --overlay-bg: rgba(0, 0, 0, 0.7);
+    --accent-color: #e50914;
+    --error-color: #ff3b30;
+    --success-color: #4cd964;
+    --bg-gradient: linear-gradient(to bottom, rgba(20, 20, 20, 0.7), transparent);
+  }
+  
+  .light-mode {
+    /* Light theme */
+    --primary-bg: #ffffff;
+    --primary-text: #141414;
+    --secondary-bg: #f0f0f0;
+    --border-color: #ddd;
+    --nav-bg: rgba(255, 255, 255, 0.9);
+    --hover-bg: rgba(0, 0, 0, 0.1);
+    --card-bg: #ffffff;
+    --placeholder-color: rgba(0, 0, 0, 0.4);
+    --placeholder-text: rgba(0, 0, 0, 0.4);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --overlay-bg: rgba(0, 0, 0, 0.5);
+    --accent-color: #e50914;
+    --error-color: #ff3b30;
+    --success-color: #4cd964;
+    --bg-gradient: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), transparent);
+  }
+  

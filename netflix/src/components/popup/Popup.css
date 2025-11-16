@@ -1,0 +1,54 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--overlay-bg) !important;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Change from center to allow content to be taller */
+    padding: 2vh 0; /* Add some padding top/bottom */
+  
+  }
+  
+  .popup-content {
+    background-color: var(--primary-bg) !important;
+    color: var(--primary-text) !important;
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%; /* Narrower width */
+    max-width: 800px;
+    min-height: 95vh; /* Minimum height */
+    max-height: 98vh; /* Maximum height */
+    overflow-y: auto;
+    position: relative;
+    margin: 2vh auto; /* Center vertically with margin */
+    border: 1px solid var(--border-color) !important;
+    transition: background-color 0.3s ease;
+    scrollbar-width: none;
+  
+  }
+  .popup-container {
+    background-color: var(--primary-bg) !important;
+  
+  
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: var(--primary-text);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10000;
+  }
+    
+    .close-button:hover {
+      color: var(--accent-color);
+    }
+    

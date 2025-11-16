@@ -1,0 +1,112 @@
+/* Login.css */
+
+.hero-section1 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    position: relative; 
+    background: url('../../../public/project.webp') no-repeat center center/cover;
+  }
+  /* Auth form container */
+  .auth-form {
+    background-color: rgba(0, 0, 0, 0.85); 
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    max-width: 400px;
+    height: auto; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+  }
+  
+  /* Form title */
+  .auth-form h2 {
+    font-size: 20px; 
+    margin-bottom: 80px; 
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Input field styles */
+  .form-input {
+    margin-bottom: 20px; 
+    margin-left: 10px;
+    margin-right: 80px;
+  }
+    
+  .form-input label {
+    display: block;
+    margin-bottom: 5px; 
+    font-size: 14px; 
+    color: #ddd;
+    margin-top: 10px;
+    
+  }
+  
+    
+  .form-input input {
+    width: 120%; 
+    padding: 10px; 
+    font-size: 14px; 
+    border: 1px solid #555; 
+    border-radius: 5px; 
+    background-color: #222; 
+    color: #fff;
+    box-sizing: border-box;
+  }
+    
+    /* Button styles */
+    .auth-form button {
+      width: 100%;
+      padding: 12px; 
+      font-size: 16px; 
+      color: white;
+      background-color: #e50914; 
+      border: none;
+      border-radius: 5px; 
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .auth-form button:hover {
+      background-color: #a00505; /* Darker red on hover */
+    }
+    
+    /* Error message styles */
+    .error-message {
+      color: red;
+      font-size: 12px; /* Smaller font size */
+      margin-bottom: 10px; /* Smaller margin */
+      text-align: center;
+    }
+    
+    /* Link styles */
+    .auth-link {
+      display: flex; 
+      justify-content: center; 
+      margin-top: 20px !important;
+      font-size: 14px;
+      color: #fff;
+    }
+    
+    .auth-link a {
+      color: #e50914; 
+      text-decoration: none; 
+      font-weight: bold; 
+      margin-left: 5px; 
+    }
+    
+    .auth-link a:hover {
+      color: #b00710; 
+    }
+    .success-message {
+      color: rgb(0, 252, 8);
+        font-size: 12px; /* Smaller font size */
+        margin-bottom: 10px; /* Smaller margin */
+        text-align: center;
+    }

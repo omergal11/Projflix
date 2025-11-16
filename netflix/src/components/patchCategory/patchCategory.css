@@ -1,0 +1,25 @@
+
+.button {
+    padding: 10px;
+    background-color: #e50914;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    margin-left: 40px;
+  }
+  
+  .button:hover {
+    background-color: #c20812;
+  }
+  .no-categories {
+    color: #fff; 
+    background-color: #333; 
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
