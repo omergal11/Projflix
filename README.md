@@ -112,7 +112,7 @@ Before running the project, you **must install the following**:
 
 ```bash
 # Clone repository
-git clone https://github.com/Odeddidi/projflix.git
+git clone https://github.com/omergal11/Projflix.git
 cd projflix
 
 # Create .env.local in config directory
@@ -239,16 +239,10 @@ We welcome contributions! Please follow these steps:
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
-
----
-
 ## 👨‍💻 Author
 
-**Oded Didier**  
-- GitHub: [@Odeddidi](https://github.com/Odeddidi)
+**Omer Gal**  
+- GitHub: [@Omergal11](https://github.com/omergal11)
 
 ---
 
@@ -261,12 +255,3 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 - C++ for recommendation engine
 
 ---
-
-## 📧 Support
-
-For issues and questions:
-- **GitHub Issues**: [Create an Issue](https://github.com/Odeddidi/projflix/issues)
-
----
-
-**Made with ❤️ by Oded Didier**
