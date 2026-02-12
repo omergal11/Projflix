@@ -1,0 +1,98 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+.gradle/
+.m2/
+
+# Build outputs
+/dist/
+/build/
+*.class
+*.jar
+*.so
+*.dylib
+
+# Development
+.env.local
+.env.development
+.env.test
+.env.production.local
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# React/Node specific
+/netflix/node_modules/
+/netflix/build/
+/netflix/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# API specific
+/api/node_modules/
+/api/dist/
+/api/build/
+/api/uploads/*
+!/api/uploads/.gitkeep
+
+# Android specific
+/Netflix\ android/.gradle/
+/Netflix\ android/.idea/
+/Netflix\ android/local.properties
+/Netflix\ android/**/build/
+/Netflix\ android/**/.DS_Store
+/Netflix\ android/**/local.properties
+/Netflix\ android/**/*.jks
+/Netflix\ android/**/*.keystore
+
+# C++ specific
+/recommend/build/
+/recommend/CMakeFiles/
+/recommend/*.a
+/recommend/*.so
+/recommend/CMakeCache.txt
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Logs
+logs/
+*.log
+
+# Cache
+.cache/
+.eslintcache
+
+# OS
+Thumbs.db
+.DS_Store
+
+# IDE
+*.sublime-project
+*.sublime-workspace
+*.vim
+*.emacs
+
+# Testing
+coverage/
+.nyc_output/
+junit.xml
+
+# Config (but keep template)
+config/.env.local
+!config/.env.example
+
+# Database
+*.sqlite
+*.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
