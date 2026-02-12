@@ -17,27 +17,22 @@ This android app availble in two languges, English and Spanish, depends on your 
 - Displays a hero banner or introductory section.
 
 <p align="center">
-  <img src="androidDoc/landing_page.jpg" alt="Landing page" width="300"/>
+  <img src="androidDoc/landing_page.png" alt="Landing page" width="300"/>
 </p>
 
 - In light mode:
 
 <p align="center">
-  <img src="androidDoc/landing_page_light.jpg" alt="Landing page - light mode" width="300"/>
+  <img src="androidDoc/landing_page_light.png" alt="Landing page - light mode" width="300"/>
 </p>
 
-- In Spanish:
-
-<p align="center">
-  <img src="androidDoc/landing_page_spanish.jpg" alt="Landing page - Spanish" width="300"/>
-</p> 
 
 ### 2. SignUp Activity
 - Allows new users to **create an account**.
 - Contains fields for **email, password, confirm password, and profile picture**.
 
 <p align="center">
-  <img src="androidDoc/sign_up_activity.jpg" alt="Sign Up Activity" width="300"/>
+  <img src="androidDoc/sign_up_activity.png" alt="Sign Up Activity" width="300"/>
 </p>
 
 ### 3. LogIn Activity
@@ -45,7 +40,7 @@ This android app availble in two languges, English and Spanish, depends on your 
 - Requires **email and password**.
 
 <p align="center">
-  <img src="androidDoc/log_in_activity.jpg" alt="Log In Activity" width="300"/>
+  <img src="androidDoc/log_in_activity.png" alt="Log In Activity" width="300"/>
 </p>
 
 ### 4. Home Activity
@@ -129,20 +124,20 @@ the page where you can watch the full movie
 - The admin can choose between categories and movies 
 
 <p align="center">
-  <img src="androidDoc/admin_categories.jpg" alt="Admin Category Activity" width="300"/>
+  <img src="androidDoc/admin_categories.png" alt="Admin Category Activity" width="300"/>
 </p>
 
 ### Add Catgory Activity
 - In the categories admin activity the admin can add a category:
 
 <p align="center">
-  <img src="androidDoc/admin_add_category.jpg" alt="Add Category Activity" width="300"/>
+  <img src="androidDoc/admin_add_category.png" alt="Add Category Activity" width="300"/>
 </p>
 
 - For example:
 
 <p align="center">
-  <img src="androidDoc/admin_add_category_example.jpg" alt="Add Category Example" width="300"/>
+  <img src="androidDoc/admin_add_category_example.png" alt="Add Category Example" width="300"/>
 </p>
 
 ### Admin Movies Activity
@@ -156,20 +151,20 @@ the page where you can watch the full movie
 - In the movies admin activity the admin can add a movie:
 
 <p align="center">
-  <img src="androidDoc/admin_add_movie.jpg" alt="Add Movie Activity" width="300"/>
+  <img src="androidDoc/admin_add_movie.png" alt="Add Movie Activity" width="300"/>
 </p>
 
 - For example:
 
 <p align="center">
-  <img src="androidDoc/admin_add_movie_example.jpg" alt="Add Movie Example" width="300"/>
+  <img src="androidDoc/admin_add_movie_example.png" alt="Add Movie Example" width="300"/>
 </p>
 
 ### Edit Movie Activity
 - In the movies admin activity the admin can edit a movie:
 
 <p align="center">
-  <img src="androidDoc/admin_edit_movie.jpg" alt="Edit Movie Activity" width="300"/>
+  <img src="androidDoc/admin_edit_movie.png" alt="Edit Movie Activity" width="300"/>
 </p>
 
 ## instructions for admin 
