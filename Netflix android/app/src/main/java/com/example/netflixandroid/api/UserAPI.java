@@ -105,9 +105,12 @@ public class UserAPI {
                     JsonObject jsonResponse = response.body();
                     if (jsonResponse != null) {
                         String token = jsonResponse.get("token").getAsString();
-                        PreferencesManager.saveToken(token);
+                        if (PreferencesManager.saveToken(token)) {
+                            statusMessage.postValue("Login successful");
+                        } else {
+                            statusMessage.postValue("Error: Invalid token");
+                        }
                     }
-                    statusMessage.postValue("Login successful");
                 }
                 else {
                     //handle error

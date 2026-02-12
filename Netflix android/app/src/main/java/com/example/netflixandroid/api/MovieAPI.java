@@ -22,7 +22,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
+import okhttp3.OkHttpClient;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -55,9 +57,17 @@ public class MovieAPI {
         this.featuredMovie = featuredMovie;
         this.moviesInPromotedCategoryLiveData = moviesInPromotedCategory;
         String baseUrl = NetflixApplication.getBaseUrl() + "api/";
+        
+        OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .connectTimeout(30, TimeUnit.SECONDS)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .writeTimeout(30, TimeUnit.SECONDS)
+                .build();
+        
         //init retrofit
         retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
+                .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -253,33 +263,35 @@ public class MovieAPI {
                     for (Pair<String, List<Movie>> categoryPair : moviesInPromotedCategory) {
                         allPromotedMovies.addAll(categoryPair.second);
                     }
-                    if (!allPromotedMovies.isEmpty()) {
-                        //choose random movie
-                        Random random = new Random();
-                        int randomIndex = random.nextInt(allPromotedMovies.size()); 
-                        Movie randomMovie = allPromotedMovies.get(randomIndex);
-
-                        //update feature movie live data
-                        featuredMovie.setValue(randomMovie);
-                        for (Movie movie : allPromotedMovies){
+                    
+                    new Thread(() -> {
+                        // Process movies on a background thread
+                        for (Movie movie : allPromotedMovies) {
+                            // This is the fix: look up category names synchronously on this background thread
                             List<String> categoriesName = new ArrayList<>();
-                            for (String categoryId : movie.getCategories()){
-                                new Thread(() -> {
+                            if (movie.getCategories() != null) {
+                                for (String categoryId : movie.getCategories()) {
                                     Category category = categoryDao.getCategoryById(categoryId);
-                                    categoriesName.add(category.getName());
-                                }).start();
+                                    if (category != null) {
+                                        categoriesName.add(category.getName());
+                                    }
+                                }
                             }
                             movie.setCategories(categoriesName);
-                        }
-                    }
-                    //update live data
-                    moviesInPromotedCategoryLiveData.postValue(moviesInPromotedCategory);
-
-                    new Thread(() -> {
-                        //insert movies to room
-                        for (Movie movie : allPromotedMovies ){
+                            
+                            // Insert into room DB
                             insertMovieIfNotExist(movie);
                         }
+
+                        // After processing, update LiveData from the background thread
+                        if (!allPromotedMovies.isEmpty()) {
+                            Random random = new Random();
+                            int randomIndex = random.nextInt(allPromotedMovies.size());
+                            Movie randomMovie = allPromotedMovies.get(randomIndex);
+                            featuredMovie.postValue(randomMovie);
+                        }
+                        
+                        moviesInPromotedCategoryLiveData.postValue(moviesInPromotedCategory);
                         movieListData.postValue(movieDao.getAllMovies());
                         statusMessage.postValue("promoted movies upload");
                     }).start();

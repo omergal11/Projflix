@@ -34,7 +34,7 @@ public class PreferencesManager {
     }
 
     //function to save the token
-    public static void saveToken(String token) {
+    public static boolean saveToken(String token) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         String jwtSecret = sharedPreferences.getString(JWT_SECRET,null);
         editor.putString(TOKEN_KEY, token);
@@ -42,8 +42,7 @@ public class PreferencesManager {
         try {
             //decode the token
             Algorithm algorithm = Algorithm.HMAC256(jwtSecret);
-            JWTVerifier verifier = JWT.require(algorithm).build();
-            Thread.sleep(3000);
+            JWTVerifier verifier = JWT.require(algorithm).acceptLeeway(5).build(); // Allow 5 seconds leeway
             DecodedJWT decodedJWT = verifier.verify(token);
 
             //extract the user ID and role
@@ -56,6 +55,7 @@ public class PreferencesManager {
 
             editor.apply();
             Log.d("PreferencesManager", "User ID: " + userId + ", User Role: " + userRole);
+            return true;
         } catch (JWTDecodeException e) {
             Log.e("PreferencesManager", "Error decoding token", e);
         } catch (InvalidClaimException e) {
@@ -64,6 +64,7 @@ public class PreferencesManager {
             e.printStackTrace();
             Log.e("PreferencesManager", "Error extracting user ID or role from token", e);
         }
+        return false;
     }
     public static void saveNetworkSettings(String ipAddress, String port,String jwtSecret) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
