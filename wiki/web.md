@@ -119,12 +119,7 @@ the page where you can watch the full movie
 ### 4. `MovieList`
 - Component that **renders a list of movies** dynamically.
 
-### 5. `SearchList`
-- Dropdown search result list integrated with `SearchBox`.
-
-  ![alt text](webDoc/searchlist.png)
-
-### 6. `NavBar`
+### 5. `NavBar`
 - Navigation bar containing:
   - **home**
   - **movies**
@@ -137,22 +132,22 @@ the page where you can watch the full movie
   ![alt text](webDoc/nav.png)
 
 
-### 7. `Footer`
+### 6. `Footer`
 - Footer section of the site with links and credits.
 ![alt text](webDoc/footer.png)
 
 
-### 8. `SimilarTable`
+### 7. `SimilarTable`
 - Displays **movies similar** to the currently viewed movie.
 ![alt text](webDoc/similar.png)
 
-### 9. `Popup`
+### 8. `Popup`
 - Used for displaying detailed **movie information** in a modal.
 
   ![alt text](webDoc/popup.png)
 
 
-### 10. `HomeVideoPlayer`
+### 9. `HomeVideoPlayer`
 - A background video player appearing at the **top of the homepage**.
    ![alt text](webDoc/cover.png)
 
